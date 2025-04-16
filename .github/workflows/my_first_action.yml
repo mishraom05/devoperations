@@ -7,6 +7,6 @@ jobs:
    - name: First step print greeting
      run: echo hello first step in action
    - name: Second step goodbye
-     run: echo bye second step in action
+     run: echo bye!! second step in action
      
      
