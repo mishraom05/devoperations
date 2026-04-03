@@ -54,4 +54,7 @@ This explains the devops flow.
    * GET /health
    * GET /products?name&limit=20&offset=0
    * POST /orders
-   
+
+# LAYERED ARCHITECTURE
+* A top level transport is designed which has service within it which in turn has repository within it. Thus defining dependency of one component with another. Each component has a specific purpose to serve and are co-dependent.
+![alt text](architecture/layered-architecture.png)
