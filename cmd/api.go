@@ -7,6 +7,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/mishraom05/golang-project/internal/products"
 )
 
 // mount
@@ -31,6 +32,9 @@ func (app *application) mount() http.Handler {
 		w.Write([]byte("Healthy"))
 	})
 	// http.ListenAndServe(":3000", r) ## Move to run func()
+
+	productHandler := products.NewHandler(products.Service{})
+	r.Get("/products", productHandler.ListProducts)
 
 	return r
 }
