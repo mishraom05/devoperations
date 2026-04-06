@@ -33,7 +33,8 @@ func (app *application) mount() http.Handler {
 	})
 	// http.ListenAndServe(":3000", r) ## Move to run func()
 
-	productHandler := products.NewHandler(products.Service{})
+	productService := products.NewService()
+	productHandler := products.NewHandler(productService)
 	r.Get("/products", productHandler.ListProducts)
 
 	return r
