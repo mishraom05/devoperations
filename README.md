@@ -58,3 +58,17 @@ This explains the devops flow.
 # LAYERED ARCHITECTURE
 * A top level transport is designed which has service within it which in turn has repository within it. Thus defining dependency of one component with another. Each component has a specific purpose to serve and are co-dependent.
 ![alt text](architecture/layered-architecture.png)
+
+# Integrating sqlc, goose and Postgresql
+* Document URL : https://docs.sqlc.dev/en/latest/tutorials/getting-started-postgresql.html
+* Git Hub Repo : https://github.com/pressly/goose
+* Install command : go install github.com/pressly/goose/v3/cmd/goose@latest
+* Create a new SQL migration
+
+   ```
+   $ goose create add_some_column sql
+   $ Created new file: 20170506082420_add_some_column.sql
+
+   $ goose -s create add_some_column sql
+   $ Created new file: 00001_add_some_column.sql
+   ```
