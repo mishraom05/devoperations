@@ -1,5 +1,6 @@
 # Golang
-This explains the devops flow.
+* Building a Production API in Golang from scratch (Ecommerce Project)
+* Reference URL : https://www.youtube.com/watch?v=s3XItrqfccw
 
 # Tech Stack
 ## Development 
