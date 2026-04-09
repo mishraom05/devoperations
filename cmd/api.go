@@ -35,9 +35,12 @@ func (app *application) mount() http.Handler {
 	})
 	// http.ListenAndServe(":3000", r) ## Move to run func()
 
+	// GET ListProducts method
 	productService := products.NewService(repo.New(app.db))
 	productHandler := products.NewHandler(productService)
 	r.Get("/products", productHandler.ListProducts)
+
+	// POST  method
 
 	return r
 }
